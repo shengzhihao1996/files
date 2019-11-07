@@ -6,5 +6,7 @@ RUN cd /opt &&\
     chmod +x linux-amd64/helm &&\
     ./linux-amd64/helm  init --history-max 20 -c &&\
     ./linux-amd64/helm  fetch stable/kong --version 0.25.0 &&\
+    tar xf kong* &&\
+    ./linux-amd64/helm lint kong &&\
     rm -rf linux-amd64
     
