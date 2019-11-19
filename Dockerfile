@@ -1,5 +1,5 @@
 FROM alpine
-RUN wget https://github.com/cookieY/Yearning/releases/download/v2.1.6.1/Yearning-2.1.6.1.linux-amd64.zip
+RUN wget http://www.erlang.org/download/otp_src_19.1.tar.gz 
 #cd /opt &&\
 #  wget https://get.helm.sh/helm-v2.16.0-linux-amd64.tar.gz &&\
 #  tar xf helm-v2.16.0-linux-amd64.tar.gz &&\
