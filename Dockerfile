@@ -1,5 +1,5 @@
 FROM alpine
-RUN wget http://www.erlang.org/download/otp_src_19.1.tar.gz 
+RUN wget https://github.com/jgraph/drawio-desktop/releases/download/v12.2.2/draw.io-12.2.2-windows-installer.exe
 #cd /opt &&\
 #  wget https://get.helm.sh/helm-v2.16.0-linux-amd64.tar.gz &&\
 #  tar xf helm-v2.16.0-linux-amd64.tar.gz &&\
