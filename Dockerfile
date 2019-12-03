@@ -1,18 +1,6 @@
-FROM golang
-RUN  git
-#wget https://github.com/operator-framework/operator-sdk/releases/download/v0.12.0/operator-sdk-v0.12.0-x86_64-linux-gnu
 
-
-
-
-
-
-
-
-
-
-#FROM alpine
-#RUN wget https://github.com/jgraph/drawio-desktop/releases/download/v12.2.2/draw.io-12.2.2-windows-installer.exe
+FROM alpine
+RUN wget https://github.com/tektoncd/cli/releases/download/v0.5.1/tkn_0.5.1_Linux_x86_64.tar.gz
 #cd /opt &&\
 #  wget https://get.helm.sh/helm-v2.16.0-linux-amd64.tar.gz &&\
 #  tar xf helm-v2.16.0-linux-amd64.tar.gz &&\
