@@ -1,5 +1,5 @@
 FROM golang
-RUN apk add git
+RUN  git
 #wget https://github.com/operator-framework/operator-sdk/releases/download/v0.12.0/operator-sdk-v0.12.0-x86_64-linux-gnu
 
 
