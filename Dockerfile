@@ -1,6 +1,6 @@
 
-FROM alpine
-RUN wget https://github.com/tektoncd/cli/releases/download/v0.5.1/tkn_0.5.1_Linux_x86_64.tar.gz
+FROM quay.io/prometheus/node-exporter
+#RUN wget https://github.com/tektoncd/cli/releases/download/v0.5.1/tkn_0.5.1_Linux_x86_64.tar.gz
 #cd /opt &&\
 #  wget https://get.helm.sh/helm-v2.16.0-linux-amd64.tar.gz &&\
 #  tar xf helm-v2.16.0-linux-amd64.tar.gz &&\
