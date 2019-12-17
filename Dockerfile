@@ -1,7 +1,7 @@
 
 FROM alpine
-RUN wget https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-32-bit.exe
-RUN wget https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-64-bit.exe
+RUN wget http://slproweb.com/download/Win64OpenSSL_Light-1_1_1d.exe
+#RUN wget https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-64-bit.exe
 #RUN wget https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-32-bit.exe
 #cd /opt &&\
 #  wget https://get.helm.sh/helm-v2.16.0-linux-amd64.tar.gz &&\
