@@ -1,5 +1,5 @@
 
-FROM quay.io/external_storage/rbd-provisioner:latest
+FROM docker.elastic.co/elasticsearch/elasticsearch:6.8.1
 #RUN wget https://dl.k8s.io/v1.14.8/kubernetes.tar.gz
 #RUN wget https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-64-bit.exe
 #RUN wget https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-32-bit.exe
