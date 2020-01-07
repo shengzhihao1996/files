@@ -1,7 +1,7 @@
 FROM alpine
 
-RUN cd /opt && wget https://get.helm.sh/helm-v3.0.2-linux-amd64.tar.gz &&\
-tar xf helm-v3.0.2-linux-amd64.tar.gz && cp linux-amd64/helm /bin &&\
+RUN cd /opt && wget https://get.helm.sh/helm-v2.11.0-linux-amd64.tar.gz &&\
+tar xf helm-v2.11.0-linux-amd64.tar.gz && cp linux-amd64/helm /bin &&\
 ls -l * 
 RUN /bin/helm init --client-only &&\
 /bin/helm fetch stable/prometheus-operator && ls -l
