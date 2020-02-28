@@ -11,6 +11,7 @@ cd $GOPATH/src/github.com/cnych && \
 curl -LO https://github.com/operator-framework/operator-sdk/releases/download/v0.7.0/operator-sdk-v0.7.0-x86_64-linux-gnu && \
 mv operator-sdk-v0.7.0-x86_64-linux-gnu operator-sdk && \
 chmod +x operator-sdk && \
+go get -u github.com/golang/dep/cmd/dep && \
 # 使用 sdk 创建一个名为 opdemo 的 operator 项目
 ./operator-sdk new opdemo && \
 ls -l
