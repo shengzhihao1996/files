@@ -6,7 +6,7 @@ from aliyunsdkcore.client import AcsClient
 from aliyunsdkcr.request.v20160607 import StartRepoBuildByRuleRequest
 # 示例执行异常时建议升级aliyun-python-sdk-core到最新版本
 # 设置Client
-apiClient = AcsClient('LTAI4FrTtVyJfv1eqV3YTjCL', 'PoMJlwdHQGqxpqFCJLutv4OmmWx8sS', 'cn-huhehaote')
+apiClient = AcsClient('', '', 'cn-huhehaote')
 # 构造请求
 request = StartRepoBuildByRuleRequest.StartRepoBuildByRuleRequest()
 # 设置参数
