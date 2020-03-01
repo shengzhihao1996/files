@@ -1,7 +1,8 @@
 FROM golang:1.13
 
-RUN cd /opt && \
-curl -LO https://github.com/operator-framework/operator-sdk/releases/download/v0.7.0/operator-sdk-v0.7.0-x86_64-linux-gnu
+RUN go get k8s.io/api/v1
+#cd /opt && \
+#curl -LO https://github.com/operator-framework/operator-sdk/releases/download/v0.7.0/operator-sdk-v0.7.0-x86_64-linux-gnu
 #go get -u github.com/golang/dep/cmd/dep && \
 # 创建项目目录
 #mkdir -p operator-learning   && \
