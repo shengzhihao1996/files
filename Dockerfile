@@ -1,6 +1,6 @@
 #FROM fluent/fluentd-kubernetes-daemonset:v1-debian-elasticsearch
 FROM alpine
-RUN wget https://github.com/dcu/mongodb_exporter/releases/download/v1.0.0/mongodb_exporter-linux-amd64
+RUN wget https://github.com/dcu/mongodb_exporter/releases/download/v1.0.0/mongodb_exporter-linux-amd64 && chmod +x mongodb_exporter-linux-amd64
 #go get k8s.io/api/v1
 #cd /opt && \
 #curl -LO https://github.com/operator-framework/operator-sdk/releases/download/v0.7.0/operator-sdk-v0.7.0-x86_64-linux-gnu
