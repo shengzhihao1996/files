@@ -1,5 +1,21 @@
+FROM       alpine:latest
+MAINTAINER David Cuadrado <dacuad@facebook.com>
+EXPOSE     9001
+
+ENV  GOPATH /go
+ENV APPPATH $GOPATH/src/github.com/dcu/mongodb_exporter
+COPY . $APPPATH
+RUN echo -e "https://mirrors.aliyun.com/alpine/v3.10/main\nhttps://mirrors.aliyun.com/alpine/v3.10/community" > /etc/apk/repositories &&\
+    apk add --update -t build-deps go git mercurial libc-dev gcc libgcc \
+    && cd $APPPATH && go get -d && go build -o /bin/mongodb_exporter \
+    && apk del --purge build-deps && rm -rf $GOPATH
+
+ENTRYPOINT [ "/bin/mongodb_exporter","-mongodb.uri","$MONGODBURI" ]
+#
+
+
 #FROM fluent/fluentd-kubernetes-daemonset:v1-debian-elasticsearch
-FROM argoproj/argocd:latest
+#FROM argoproj/argocd:latest
 #golang
 #RUN go get -u github.com/go-delve/delve/cmd/dlv
 
