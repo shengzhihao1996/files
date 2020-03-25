@@ -1,16 +1,9 @@
 FROM       alpine:latest
-MAINTAINER David Cuadrado <dacuad@facebook.com>
-EXPOSE     9001
-
-ENV  GOPATH /go
-ENV APPPATH $GOPATH/src/github.com/dcu/mongodb_exporter
-COPY . $APPPATH
-RUN echo -e "https://mirrors.aliyun.com/alpine/v3.10/main\nhttps://mirrors.aliyun.com/alpine/v3.10/community" > /etc/apk/repositories &&\
-    apk add --update -t build-deps go git mercurial libc-dev gcc libgcc \
-    && cd $APPPATH && go get -d && go build -o /bin/mongodb_exporter \
-    && apk del --purge build-deps && rm -rf $GOPATH
-
-ENTRYPOINT [ "/bin/mongodb_exporter","-mongodb.uri","$MONGODBURI" ]
+RUN wget https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-amd64.tar.gz
+RUN wget https://github.com/dcu/mongodb_exporter/releases/download/v1.0.0/mongodb_exporter-linux-amd64
+RUN wget https://github.com/noony/prometheus-solr-exporter/releases/download/v0.0.14/prometheus-solr-exporter-0.0.14.linux-amd64.tar.gz
+RUN wget https://github.com/dabealu/zookeeper-exporter/releases/download/v0.1.3/zookeeper-exporter-v0.1.3-linux.tar.gz
+RUN wget https://github.com/carlpett/zookeeper_exporter/releases/download/v1.0.2/zookeeper_exporter
 #
 
 
