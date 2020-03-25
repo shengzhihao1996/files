@@ -1,6 +1,7 @@
 #FROM fluent/fluentd-kubernetes-daemonset:v1-debian-elasticsearch
-FROM golang
-RUN go get -u github.com/go-delve/delve/cmd/dlv
+FROM argoproj/argocd:latest
+#golang
+#RUN go get -u github.com/go-delve/delve/cmd/dlv
 
 #wget https://github.com/dcu/mongodb_exporter/releases/download/v1.0.0/mongodb_exporter-linux-amd64 && chmod +x mongodb_exporter-linux-amd64
 #go get k8s.io/api/v1
