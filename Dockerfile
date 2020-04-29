@@ -1,12 +1,7 @@
-FROM       alpine:latest
-RUN wget https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-amd64.tar.gz
-RUN wget https://github.com/dcu/mongodb_exporter/releases/download/v1.0.0/mongodb_exporter-linux-amd64
-RUN wget https://github.com/noony/prometheus-solr-exporter/releases/download/v0.0.14/prometheus-solr-exporter-0.0.14.linux-amd64.tar.gz
-RUN wget https://github.com/dabealu/zookeeper-exporter/releases/download/v0.1.3/zookeeper-exporter-v0.1.3-linux.tar.gz
-RUN wget https://github.com/carlpett/zookeeper_exporter/releases/download/v1.0.2/zookeeper_exporter
-#
-
-
+FROM alpine:latest
+RUN wget https://github.com/zeebe-io/zeebe/releases/download/0.22.2/zeebe-distribution-0.22.2.tar.gz
+RUN wget https://github.com/zeebe-io/zeebe-hazelcast-exporter/releases/download/0.7.0/zeebe-hazelcast-exporter-0.7.0-jar-with-dependencies.jar
+RUN wget https://github.com/krallin/tini/releases/download/v0.18.0/tini
 #FROM fluent/fluentd-kubernetes-daemonset:v1-debian-elasticsearch
 #FROM argoproj/argocd:latest
 #golang
