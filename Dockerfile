@@ -1,4 +1,5 @@
-FROM hazelcast/management-center:3.12.6
+FROM registry.cn-huhehaote.aliyuncs.com/szh0/chart
+RUN cd /app/ && mvn clean package -U -Dmaven.test.skip=true
 # RUN wget https://github.com/zeebe-io/zeebe/releases/download/0.22.2/zeebe-distribution-0.22.2.tar.gz
 # RUN wget https://github.com/zeebe-io/zeebe-hazelcast-exporter/releases/download/0.7.0/zeebe-hazelcast-exporter-0.7.0-jar-with-dependencies.jar
 # RUN wget https://github.com/krallin/tini/releases/download/v0.18.0/tini
