@@ -1,7 +1,7 @@
-FROM alpine:latest
-RUN wget https://github.com/zeebe-io/zeebe/releases/download/0.22.2/zeebe-distribution-0.22.2.tar.gz
-RUN wget https://github.com/zeebe-io/zeebe-hazelcast-exporter/releases/download/0.7.0/zeebe-hazelcast-exporter-0.7.0-jar-with-dependencies.jar
-RUN wget https://github.com/krallin/tini/releases/download/v0.18.0/tini
+FROM camunda/zeebe:0.23.1
+# RUN wget https://github.com/zeebe-io/zeebe/releases/download/0.22.2/zeebe-distribution-0.22.2.tar.gz
+# RUN wget https://github.com/zeebe-io/zeebe-hazelcast-exporter/releases/download/0.7.0/zeebe-hazelcast-exporter-0.7.0-jar-with-dependencies.jar
+# RUN wget https://github.com/krallin/tini/releases/download/v0.18.0/tini
 #FROM fluent/fluentd-kubernetes-daemonset:v1-debian-elasticsearch
 #FROM argoproj/argocd:latest
 #golang
