@@ -1,5 +1,5 @@
 FROM alpine
-RUN  git clone https://github.com/fluent/fluent-bit.git -b v1.3.11
+RUN  apk add git && git clone https://github.com/fluent/fluent-bit.git -b v1.3.11
 # RUN wget https://github.com/zeebe-io/zeebe/releases/download/0.22.2/zeebe-distribution-0.22.2.tar.gz
 # RUN wget https://github.com/zeebe-io/zeebe-hazelcast-exporter/releases/download/0.7.0/zeebe-hazelcast-exporter-0.7.0-jar-with-dependencies.jar
 # RUN wget https://github.com/krallin/tini/releases/download/v0.18.0/tini
