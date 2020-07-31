@@ -1,5 +1,26 @@
-FROM alpine
-RUN   apk add curl ; curl -L "https://github.com/docker/compose/releases/download/1.26.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+FROM alpine:latest
+MAINTAINER shiji alpine jdk8 <mget@foxmail.com>
+
+
+# 换源
+#RUN echo 'http://mirrors.ustc.edu.cn/alpine/edge/main' > /etc/apk/repositories
+#RUN echo '@community http://mirrors.ustc.edu.cn/alpine/edge/community' >> /etc/apk/repositories
+#RUN echo '@testing http://mirrors.ustc.edu.cn/alpine/edge/testing' >> /etc/apk/repositories
+
+# 修改一些系统设置
+RUN echo 'vm.overcommit_memory = 1' >> /etc/sysctl.conf
+RUN echo "echo never > /sys/kernel/mm/transparent_hugepage/enabled" >> /etc/rc.local
+
+RUN apk update && \
+ apk add openjdk8 curl busybox tzdata && \
+ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+ echo Asia/Shanghai > /etc/timezone && \
+ apk del tzdata && \
+ rm -rf /tmp/* /var/cache/apk/*
+
+
+# FROM alpine
+# RUN   apk add curl ; curl -L "https://github.com/docker/compose/releases/download/1.26.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 #apk add git && git clone https://github.com/fluent/fluent-bit.git -b v1.3.11
 # RUN wget https://github.com/zeebe-io/zeebe/releases/download/0.22.2/zeebe-distribution-0.22.2.tar.gz
 # RUN wget https://github.com/zeebe-io/zeebe-hazelcast-exporter/releases/download/0.7.0/zeebe-hazelcast-exporter-0.7.0-jar-with-dependencies.jar
